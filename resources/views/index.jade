@@ -82,13 +82,14 @@ block main
     .container.px-2.py-3.w-lg-100
       .row.m-0
         .col-12.p-0
-          .carousel
-            - for(x=1; x< 3; x++)
-              +carousel('Pay Online Fee','b-1.png','button-blue')
-              +carousel('Model Mission and vision','b-2.png','button-red')
-              +carousel('Principal Message','b-3.png','button-yellow')
-              +carousel('Photo Gallery','b-4.png','button-gray')
-              +carousel('Morning Assembly','b-4.png','button-green')
+          .carousel.overflow-hidden
+            marquee(scrollamount='3' onmouseover='this.stop();' onmouseout='this.start();' direction='left' style='')
+              .d-flex
+                +carousel('Pay Online Fee','b-1.png','button-blue')
+                +carousel('Model Mission and vision','b-2.png','button-red')
+                +carousel('Principal Message','b-3.png','button-yellow')
+                +carousel('Photo Gallery','b-4.png','button-gray')
+                +carousel('Morning Assembly','b-4.png','button-green')
   section.facilties.space
     .container
       .row

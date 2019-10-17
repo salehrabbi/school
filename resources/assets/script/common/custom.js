@@ -14,10 +14,3 @@ $(".slider").slick({
   arrows: false,
   autoplay: true
 });
-
-$(".carousel").flickity({
-  // options
-  cellAlign: "left",
-  contain: true,
-  autoPlay: true
-});
