@@ -2,7 +2,120 @@ extends layouts/app.jade
 
 block title
   title Home
-  
+
 block main
-  <i class="fas fa-ad"></i>
-  <i class="fal fa-angle-right"></i>
+  section.top-slider-notice
+    .container.p-0
+      .row.m-0
+        .col-lg-4.px-2.order-2.order-lg-1
+          .panel.panel-default.noticeboard
+            .Title
+              span#lblNoticeBoard Notice Board
+            .panel-body(style='background-color:#fff; border:none; margin-top:10px;padding-bottom: 50px;padding-top:15px;')
+              marquee(scrollamount='3' onmouseover='this.stop();' onmouseout='this.start();' direction='up' style='height:400px; margin-top:5px;width: 100%;padding: 0 20px;')
+                .content.light
+                  ul.list-unstyled
+                    li.Page-list-group-item
+                      div(style='position:relative')
+                        p
+                          span(style='color: rgb(192, 80, 77);') Workshop on “Mental Health For Parents”
+                        p
+                          | Serenity Work, Home and Happiness
+                          br
+                          | 	     CONDUCTED BY: DR. NIVEDITA GANGULI (Gold Medalist in Psychology and Principal of D.A.V International School, Ahmedabad) ,10
+                          sup th
+                          |  October, 2019 (Thursday)  8:00 a.m to 9:00 a.m ,D.A.V International School, Ahmedabad-
+                          a(href='/File/19/Invitation World Mental Health Day-page0001.jpg ' target='_blank') See More
+                    li.Page-list-group-item
+                      div(style='position:relative')
+                        h3
+                          img(src='dist/images/new.GIF' style='background-color: initial;')
+                          span(style='background-color: initial;')  
+                          a(href='/FD49C83A-477D-4379-9967-279E7D7CF6AB/CMS/Page/Online-Fee')
+                            span(style='background-color: rgb(255, 255, 0); color: rgb(0, 0, 0);') Pay Online Fee
+                    li.Page-list-group-item
+                      div(style='position:relative')
+                        p
+                          | New Year Message from Regional Director 
+                          span(style='background-color: initial;') Shri Jose Kurian Sir 
+                        p
+                          span(style='background-color: initial;')
+                          a(href='/File/19/Shri Jose Kurien sir.pdf' target='_blank' style='background-color: initial;') Read More
+                    li.Page-list-group-item
+                      div(style='position:relative')
+                        p
+                          | New Year Message from President Shri Punam Suriji
+                        p
+                          a(href='/File/19/New year message from President sir.pdf ' target='_blank') Read Here
+                    li.Page-list-group-item
+                      div(style='position:relative')
+                        p
+                          strong
+                            span(style='background-color: rgb(155, 187, 89);') Admission Open 2019-20
+                        p
+                          strong
+                          | For Classes : NURSERY to GRADE XII
+                        p
+                          | Timings : 08:00am to 2:00pm
+                        p
+                          em
+                            | Details of the admission procedure and fee schedule can be obtained from the school office.
+        .col-lg-8.pl-lg-2.pr-0.p-0.order-1.order-lg-2
+          .slider.full-width-lg 
+            - for(x=1; x< 5; x++)
+              .item.d-flex.align-items-end(style="background-image: url(dist/images/slider.png)")
+                .caption.p-3
+                  h4 Importance of culture
+                  p.m-0 Navaratri
+  section.news
+    .container.bg-blue.p-2.w-lg-100 
+      .row.m-0
+        .col.d-flex.p-0.align-items-center
+          .button.btn announcement
+          div.col-md-9.col-sm-9.col-8.p-0
+            .annoucement
+              - for(x=1; x< 5; x++)
+                .item  
+                  a.c-white(href="#") Hurry-#{x}! Admissions are open for 2019-2020 Contact Office
+
+  section.services
+    .container.px-2.py-3.w-lg-100
+      .row.m-0
+        .col-12.p-0
+          .carousel
+            - for(x=1; x< 3; x++)
+              +carousel('Pay Online Fee','b-1.png','button-blue')
+              +carousel('Model Mission and vision','b-2.png','button-red')
+              +carousel('Principal Message','b-3.png','button-yellow')
+              +carousel('Photo Gallery','b-4.png','button-gray')
+              +carousel('Morning Assembly','b-4.png','button-green')
+  section.facilties.space
+    .container
+      .row
+        .col-12.full-width-lg
+          .section-heading
+            h2.mt-0.text-uppercase OUR FACILITIES
+            p We make your child happy day after day
+            .border-btoom
+      .row
+        +facilties('f-1.png','class rooms','Variety of spacious classroom settings. Each classroom will be set up based on what is necessary to meet learning objectives')   
+        +facilties('f-2.png','playground','Sports activities are meticulously detailed in to the school curriculum so as to develop social and emotional skills besides providing opportunities for physical fitness')   
+        +facilties('f-3.png','computer labs','Two well equipped computer labs with LED monitors and latest computer systems with internet connection.')   
+        +facilties('f-4.png','LIBRARY','Well stocked library with the best of management, media, technical and informative books,')   
+  section.banner.space.text-center.d-flex.justify-content-center.align-items-center
+    .container
+      .row
+        .col-12
+          .section-heading.text-center
+            h2.mt-0.text-uppercase.mb-0.c-white join our school!
+            p.c-white.text-uppercase are you ready?
+            .border-btoom.mx-auto.bg-white
+      .row.mx-auto(style="max-width:480px")
+        .col-md-6
+          a.mb-3.px-3.btn.button.button-light-blue.button-small.font-weight-normal(href="#") 
+            img.mr-2(src="dist/images/course-icon-19.png" alt="")
+            | ALL COURSES
+        .col-md-6
+          a.mb-3.px-3.btn.button.button-light-blue.button-small.font-weight-normal(href="#") 
+            img.mr-2(src="dist/images/aami3-63-512_copy_3.png" alt="")
+            | CONTACT US   

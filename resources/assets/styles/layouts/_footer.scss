@@ -1,0 +1,33 @@
+.main-footer {
+  .divider {
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 46px;
+      background: #fff;
+      margin-top: 20px;
+    }
+  }
+  .widget {
+    h3 {
+      text-transform: uppercase;
+      font-size: em(25px);
+      margin-bottom: 24px;
+    }
+    li {
+      transition: 0.3s;
+      &:hover {
+        background: #edbf47;
+      }
+    }
+  }
+  .map {
+    height: 240px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-column-gap: 121px;
+  }
+}

@@ -1,0 +1,156 @@
+.header-top {
+  background: #002147;
+  .grid {
+    display: grid;
+    grid-template-columns: 176px 1fr;
+  }
+  .logo {
+    background: #fff;
+    padding: 0 4px;
+    height: 182px;
+    position: relative;
+    z-index: 2;
+  }
+  .admision-button {
+    align-self: end;
+    padding: 12px 0;
+  }
+  .site-title {
+    color: #fff;
+    padding-left: 42px;
+    padding-bottom: 5px;
+    grid-column: 2/4;
+    position: relative;
+    h1 {
+      font-size: em(40px);
+      font-variant: small-caps;
+      @include xl {
+        font-size: 2em;
+      }
+    }
+  }
+}
+.navbar-toggler {
+  color: #fff;
+  border-color: #fff;
+}
+
+.button-top {
+  background-color: #ffbc00;
+  border-radius: 6px;
+  min-width: 127px;
+  text-shadow: 1px 1px 2px #000000;
+  color: #ffffff;
+  font-size: 14px;
+  margin-left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.navbar {
+  background: #021b37;
+  padding-left: 30px;
+  @include xl {
+    padding-left: 15px;
+    .navbar-collapse {
+      padding-top: 20px;
+    }
+  }
+  .nav-item {
+    .nav-link {
+      color: #ffffff;
+      font-size: em(15px);
+      text-transform: uppercase;
+      padding: 14px 18px;
+      transition: 0.3s;
+      @include xl {
+        padding: 15px;
+      }
+      &:hover {
+        background: #196093;
+      }
+    }
+    &.active {
+      .nav-link {
+        background: #196093;
+      }
+    }
+  }
+}
+
+@media (min-width: 1620px) {
+  .navbar {
+    padding-left: 234px;
+    margin-top: -27px;
+  }
+  .header-top {
+    height: 155px;
+  }
+  .header-top .site-title {
+    padding-bottom: 60px;
+  }
+}
+
+@include xl() {
+  .navbar {
+    margin-top: -28px;
+  }
+  .header-top .site-title {
+    padding-left: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+@include lg {
+  .header-top .site-title h1 {
+    font-size: 1.7em;
+  }
+}
+
+@include md {
+  .header-top .grid {
+    grid-template-columns: 130px 1fr;
+  }
+  .header-top .logo {
+    height: 150px;
+  }
+  .header-top .site-title h1 {
+    font-size: 1.5em;
+  }
+}
+
+@include sm {
+  .header-top .grid {
+    grid-template-columns: 1fr;
+  }
+  .header-top .logo {
+    width: 130px;
+    margin: 0 auto;
+  }
+  .header-top .site-title {
+    padding-left: 0;
+    grid-column: 1;
+  }
+  .header-top .admision-button {
+    align-self: center;
+    padding: 12px 0;
+  }
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  background: #021b37;
+}
+.dropdown-item {
+  color: #fff;
+  &:hover {
+    background: #196093;
+    color: #fff;
+  }
+}
+@media (min-width: 1200px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}

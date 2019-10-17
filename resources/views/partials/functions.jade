@@ -1,0 +1,13 @@
+mixin carousel(title,src,bg)
+  a.carousel-cell.p-2.buton.button-large.d-flex.align-items-center.justify-content-center.text-decoration-none.c-white.font-weight-bold(href="#" class=bg)
+    p.m-0.position-relative= title
+    img(src="dist/images/"+ src, alt="")
+
+
+mixin facilties(src,name,text)
+  .col-lg-3.col-sm-6.col-12
+    .item.text-center.py-3
+      div
+        img(src="dist/images/"+ src, alt="")
+      a.title.text-uppercase(href="#")= name
+      p= text   
