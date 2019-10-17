@@ -33,7 +33,7 @@ img {
     border-radius: 10px;
     margin-right: 15px;
     cursor: grab;
-    @include rwd(1366) {
+    @include rwd(1600) {
       min-width: 215px;
       min-height: 66px;
       font-size: 1em;
@@ -44,7 +44,7 @@ img {
     img {
       position: absolute;
       right: 27px;
-      @include rwd(1366) {
+      @include rwd(1600) {
         width: 25%;
         right: 20px;
       }
