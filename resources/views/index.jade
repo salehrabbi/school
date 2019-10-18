@@ -83,7 +83,7 @@ block main
       .row.m-0
         .col-12.p-0
           .carousel.overflow-hidden
-            marquee(scrollamount='3' onmouseover='this.stop();' onmouseout='this.start();' direction='left' style='')
+            marquee(behavior="ALTERNATE" scrollamount='8' onmouseover='this.stop();' onmouseout='this.start();' direction='left' style='')
               .d-flex
                 +carousel('Pay Online Fee','b-1.png','button-blue')
                 +carousel('Model Mission and vision','b-2.png','button-red')
